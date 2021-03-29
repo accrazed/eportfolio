@@ -1,7 +1,11 @@
 @import url("https://accrazed.github.io/src/font/stylesheet.css");
+/* Font */
+@import url("https://accrazed.github.io/src/font/stylesheet.css");
 #app {
+  font-family: sce-ps3_rodin_latinregular, Arial, Helvetica, sans-serif;
   background: url("https://i.ibb.co/q1FT2Qz/Nie-R-UI-Clean.png") center/cover no-repeat fixed;
   background-size: cover !important;
+  color: #57544a;
 }
 #app::before {
   top: 0;
@@ -26,6 +30,19 @@
   opacity: 0.03;
   user-select: none;
   pointer-events: none;
+}
+
+/* Font */
+.title {
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 4rem;
+  text-shadow: 0.5rem 0.5rem #979381;
+}
+
+.base {
+  padding-left: 5%;
 }
 
 /*# sourceMappingURL=style.css.map */
