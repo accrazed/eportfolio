@@ -2,6 +2,7 @@
 
 @import 'app';
 @import 'text';
+@import 'interactables';
 
 #footer {
     position: fixed;
@@ -25,7 +26,6 @@
         rgba($low, 0.4) 1.2rem,
         transparent 1.2rem
     );
-    margin-top: 2rem;
     padding-left: 3rem;
 }
 
@@ -35,6 +35,8 @@
     @include boxify($high, $mid, 3px);
 
     padding: 0.5rem 2rem;
+    margin-bottom: 2rem;
+
     border-radius: 0;
     background-image: linear-gradient(
         90deg,

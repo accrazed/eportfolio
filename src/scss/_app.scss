@@ -6,6 +6,27 @@
     box-shadow: $drop $drop 0 $drop-color;
 }
 
+@keyframes pulsingBackground {
+    0% {
+        background-color: $low;
+    }
+    20% {
+        background-color: $low;
+        opacity: 100%;
+    }
+    50% {
+        background-color: $low;
+        opacity: 50%;
+    }
+    80% {
+        background-color: $low;
+        opacity: 100%;
+    }
+    100% {
+        background-color: $low;
+    }
+}
+
 #app {
     margin: 0;
     font-family: $font, Arial, Helvetica, sans-serif;

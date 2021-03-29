@@ -1,0 +1,60 @@
+@use 'app' as *;
+@use 'vars' as *;
+
+.list {
+    width: fit-content;
+}
+
+.selectable-outer {
+    margin-bottom: 4px;
+    height: 32px;
+
+    &:hover,
+    &:active {
+        box-shadow: 0 1px $low, 0 -1px $low;
+
+        .selectable-inner {
+            color: $high;
+
+            &::before {
+                width: 100%;
+            }
+            div {
+                background-color: $high;
+            }
+        }
+    }
+}
+
+.selectable-inner {
+
+    &::before {
+        z-index: -1;
+        content: '';
+        display: block;
+        position: absolute;
+        animation-name: pulsingBackground;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        width: 0%;
+        transition: width 0.4s;
+
+        top: -1px;
+        bottom: -1px;
+        right: 0;
+        left: 0;
+    }
+    padding: 0 0.5rem;
+    position: relative;
+    height: 28px;
+    top: 2px;
+}
+
+.bullet {
+    margin-right: 0.2rem;
+    display: inline-block;
+    transform: translateY(-0.1rem);
+    background-color: $low;
+    width: 11px;
+    height: 11px;
+}

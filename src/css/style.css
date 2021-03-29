@@ -1,6 +1,27 @@
 @import url("https://accrazed.github.io/src/font/stylesheet.css");
 @import url("https://accrazed.github.io/src/font/stylesheet.css");
 @import url("https://accrazed.github.io/src/font/stylesheet.css");
+@import url("https://accrazed.github.io/src/font/stylesheet.css");
+@keyframes pulsingBackground {
+  0% {
+    background-color: #57544a;
+  }
+  20% {
+    background-color: #57544a;
+    opacity: 100%;
+  }
+  50% {
+    background-color: #57544a;
+    opacity: 50%;
+  }
+  80% {
+    background-color: #57544a;
+    opacity: 100%;
+  }
+  100% {
+    background-color: #57544a;
+  }
+}
 #app {
   margin: 0;
   font-family: "SCE PS3 Rodin Latin", Arial, Helvetica, sans-serif;
@@ -33,7 +54,7 @@
   pointer-events: none;
 }
 
-.title {
+.txt-title {
   margin-bottom: 1rem;
   text-align: left;
   text-transform: uppercase;
@@ -42,7 +63,7 @@
   text-shadow: 0.5rem 0.5rem #979381;
 }
 
-.subtitle {
+.txt-subtitle {
   font-size: 1.25rem;
   color: rgba(87, 84, 74, 0.8);
 }
@@ -63,6 +84,112 @@
   color: #cd664d;
 }
 
+@keyframes pulsingBackground {
+  0% {
+    background-color: #57544a;
+  }
+  20% {
+    background-color: #57544a;
+    opacity: 100%;
+  }
+  50% {
+    background-color: #57544a;
+    opacity: 50%;
+  }
+  80% {
+    background-color: #57544a;
+    opacity: 100%;
+  }
+  100% {
+    background-color: #57544a;
+  }
+}
+#app {
+  margin: 0;
+  font-family: "SCE PS3 Rodin Latin", Arial, Helvetica, sans-serif;
+  background: url("https://i.ibb.co/q1FT2Qz/Nie-R-UI-Clean.png") center/cover no-repeat fixed;
+  background-size: cover !important;
+  color: #57544a;
+}
+
+#app::before {
+  top: 0;
+  left: 0;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(78, 75, 66, 0.2), transparent 30%, transparent 80%, rgba(78, 75, 66, 0.2)), radial-gradient(transparent 50%, rgba(78, 75, 66, 0.4));
+  user-select: none;
+  pointer-events: none;
+}
+
+#app::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://i.ibb.co/Fq9Jt09/Nie-R-Lattice.png") repeat fixed;
+  z-index: 10000;
+  opacity: 0.03;
+  user-select: none;
+  pointer-events: none;
+}
+
+.list {
+  width: fit-content;
+}
+
+.selectable-outer {
+  margin-bottom: 4px;
+  height: 32px;
+}
+.selectable-outer:hover, .selectable-outer:active {
+  box-shadow: 0 1px #57544a, 0 -1px #57544a;
+}
+.selectable-outer:hover .selectable-inner, .selectable-outer:active .selectable-inner {
+  color: #dad4bb;
+}
+.selectable-outer:hover .selectable-inner::before, .selectable-outer:active .selectable-inner::before {
+  width: 100%;
+}
+.selectable-outer:hover .selectable-inner div, .selectable-outer:active .selectable-inner div {
+  background-color: #dad4bb;
+}
+
+.selectable-inner {
+  padding: 0 0.5rem;
+  position: relative;
+  height: 28px;
+  top: 2px;
+}
+.selectable-inner::before {
+  z-index: -1;
+  content: "";
+  display: block;
+  position: absolute;
+  animation-name: pulsingBackground;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  width: 0%;
+  transition: width 0.4s;
+  top: -1px;
+  bottom: -1px;
+  right: 0;
+  left: 0;
+}
+
+.bullet {
+  margin-right: 0.2rem;
+  display: inline-block;
+  transform: translateY(-0.1rem);
+  background-color: #57544a;
+  width: 11px;
+  height: 11px;
+}
+
 #footer {
   position: fixed;
   bottom: 0;
@@ -76,7 +203,6 @@
 
 .section {
   background-image: linear-gradient(90deg, rgba(87, 84, 74, 0.4), rgba(87, 84, 74, 0.4) 0.75rem, transparent 0.75rem, transparent 1rem, rgba(87, 84, 74, 0.4) 1rem, rgba(87, 84, 74, 0.4) 1.2rem, transparent 1.2rem);
-  margin-top: 2rem;
   padding-left: 3rem;
 }
 
@@ -87,6 +213,7 @@
   border-radius: 0;
   box-shadow: 3px 3px 0 #979381;
   padding: 0.5rem 2rem;
+  margin-bottom: 2rem;
   border-radius: 0;
   background-image: linear-gradient(90deg, #57544a, #57544a 0.75rem, #dad4bb 0.75rem, #dad4bb 1rem, #57544a 1rem, #57544a 1.2rem, #dad4bb 1.2rem);
 }
