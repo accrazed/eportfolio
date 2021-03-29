@@ -1,6 +1,7 @@
 @use 'vars' as *;
 
 #app {
+    margin: 0;
     font-family: $font, Arial, Helvetica, sans-serif;
     background: url('https://i.ibb.co/q1FT2Qz/Nie-R-UI-Clean.png') center/cover no-repeat fixed;
     background-size: cover !important;
