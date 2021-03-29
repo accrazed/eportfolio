@@ -14,6 +14,41 @@
     padding-right: 5%;
 }
 
+.section {
+    background-image: linear-gradient(
+        90deg,
+        rgba($low, 0.4),
+        rgba($low, 0.4) 0.75rem,
+        transparent 0.75rem,
+        transparent 1rem,
+        rgba($low, 0.4) 1rem,
+        rgba($low, 0.4) 1.2rem,
+        transparent 1.2rem
+    );
+    margin-top: 2rem;
+    padding-left: 3rem;
+}
+
+.tag {
+    background-color: $high;
+    width: fit-content;
+    @include boxify($high, $mid, 3px);
+
+    padding: 0.5rem 2rem;
+    border-radius: 0;
+    background-image: linear-gradient(
+        90deg,
+        $low,
+        $low 0.75rem,
+        $high 0.75rem,
+        $high 1rem,
+        $low 1rem,
+        $low 1.2rem,
+        $high 1.2rem
+    );
+}
+
+// Credit to .pattern and .pattern-inner goes to https://github.com/metakirby5/yorha
 .pattern {
     margin-top: 1rem;
     border-top: 2px solid $low;

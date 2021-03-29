@@ -15,7 +15,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(78, 75, 66, 0.2), transparent 30%, transparent 80%, rgba(78, 75, 66, 0.4)), radial-gradient(transparent 50%, rgba(78, 75, 66, 0.4));
+  background: linear-gradient(to right, rgba(78, 75, 66, 0.2), transparent 30%, transparent 80%, rgba(78, 75, 66, 0.2)), radial-gradient(transparent 50%, rgba(78, 75, 66, 0.4));
   user-select: none;
   pointer-events: none;
 }
@@ -34,11 +34,33 @@
 }
 
 .title {
+  margin-bottom: 1rem;
   text-align: left;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
   font-size: 4rem;
   text-shadow: 0.5rem 0.5rem #979381;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: rgba(87, 84, 74, 0.8);
+}
+
+.high {
+  color: #dad4bb;
+}
+
+.mid {
+  color: #979381;
+}
+
+.low {
+  color: #57544a;
+}
+
+.alert {
+  color: #cd664d;
 }
 
 #footer {
@@ -50,6 +72,23 @@
 .container {
   padding-left: 5%;
   padding-right: 5%;
+}
+
+.section {
+  background-image: linear-gradient(90deg, rgba(87, 84, 74, 0.4), rgba(87, 84, 74, 0.4) 0.75rem, transparent 0.75rem, transparent 1rem, rgba(87, 84, 74, 0.4) 1rem, rgba(87, 84, 74, 0.4) 1.2rem, transparent 1.2rem);
+  margin-top: 2rem;
+  padding-left: 3rem;
+}
+
+.tag {
+  background-color: #dad4bb;
+  width: fit-content;
+  background: #dad4bb;
+  border-radius: 0;
+  box-shadow: 3px 3px 0 #979381;
+  padding: 0.5rem 2rem;
+  border-radius: 0;
+  background-image: linear-gradient(90deg, #57544a, #57544a 0.75rem, #dad4bb 0.75rem, #dad4bb 1rem, #57544a 1rem, #57544a 1.2rem, #dad4bb 1.2rem);
 }
 
 .pattern {
