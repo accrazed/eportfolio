@@ -26,6 +26,7 @@ $github-icon-url: "https://raw.githubusercontent.com/gilbarbara/logos/master/log
     align-items: center;
 
     position: relative;
+    font-size: 0.9rem;
     height: 1.5rem;
     padding: 0.25rem 0.75rem;
     margin: auto;
@@ -33,6 +34,10 @@ $github-icon-url: "https://raw.githubusercontent.com/gilbarbara/logos/master/log
 
     background-color: $low;
     color: $high;
+
+    @media screen and (min-width: 435px) {
+        font-size: 1rem;
+    }
 }
 
 .gh-icon {
@@ -66,7 +71,15 @@ $github-icon-url: "https://raw.githubusercontent.com/gilbarbara/logos/master/log
 }
 
 .card-divider {
+    align-self: center;
+    position: relative;
+    margin: 1rem 0 0;
+
+    width: 100%;
+    height: 0.2rem;
+    background-color: $mid;
 }
+
 .selectable-outer {
     margin-bottom: 4px;
     height: 32px;
