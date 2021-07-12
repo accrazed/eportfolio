@@ -4,9 +4,13 @@
     margin-bottom: 1rem;
     text-align: left;
     text-transform: uppercase;
-    letter-spacing: .5rem;
-    font-size: 4rem;
-    text-shadow: .5rem .5rem $mid;
+    letter-spacing: 0.5rem;
+    font-size: 3rem;
+    text-shadow: 0.5rem 0.5rem $mid;
+
+    @media screen and (min-width: 425px) {
+        font-size: 4rem;
+    }
 }
 
 .txt-subtitle {

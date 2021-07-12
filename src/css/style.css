@@ -22,14 +22,22 @@
     background-color: #57544a;
   }
 }
-#app {
+.vsc-initialized {
+  margin: 0;
+}
+
+.app {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   margin: 0;
   font-family: "SCE PS3 Rodin Latin", Arial, Helvetica, sans-serif;
   background: url("https://i.ibb.co/q1FT2Qz/Nie-R-UI-Clean.png") center/cover no-repeat fixed;
   background-size: cover !important;
   color: #57544a;
+  z-index: 1;
 }
-#app::before {
+.app::before {
   top: 0;
   left: 0;
   content: "";
@@ -40,7 +48,7 @@
   user-select: none;
   pointer-events: none;
 }
-#app::after {
+.app::after {
   content: "";
   position: absolute;
   top: 0;
@@ -59,8 +67,13 @@
   text-align: left;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
-  font-size: 4rem;
+  font-size: 3rem;
   text-shadow: 0.5rem 0.5rem #979381;
+}
+@media screen and (min-width: 425px) {
+  .txt-title {
+    font-size: 4rem;
+  }
 }
 
 .txt-subtitle {
@@ -104,15 +117,23 @@
     background-color: #57544a;
   }
 }
-#app {
+.vsc-initialized {
+  margin: 0;
+}
+
+.app {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   margin: 0;
   font-family: "SCE PS3 Rodin Latin", Arial, Helvetica, sans-serif;
   background: url("https://i.ibb.co/q1FT2Qz/Nie-R-UI-Clean.png") center/cover no-repeat fixed;
   background-size: cover !important;
   color: #57544a;
+  z-index: 1;
 }
 
-#app::before {
+.app::before {
   top: 0;
   left: 0;
   content: "";
@@ -124,7 +145,7 @@
   pointer-events: none;
 }
 
-#app::after {
+.app::after {
   content: "";
   position: absolute;
   top: 0;
@@ -138,8 +159,56 @@
   pointer-events: none;
 }
 
-.list {
-  width: fit-content;
+.projects {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #dad4bb;
+  width: 20rem;
+  height: fit-content;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 1.5rem;
+  padding: 0.25rem 0.75rem;
+  margin: auto;
+  vertical-align: middle;
+  background-color: #57544a;
+  color: #dad4bb;
+}
+
+.gh-icon {
+  mask: url("https://raw.githubusercontent.com/gilbarbara/logos/master/logos/github-icon.svg") center/contain;
+  transition: background-color 0.1s;
+  background-color: #dad4bb;
+  height: 1.25rem;
+  width: 1.25rem;
+}
+.gh-icon:hover {
+  background-color: #979381;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem;
+}
+
+.card-image {
+  background-color: #979381;
+  align-self: center;
+  width: 100%;
+  height: 150px;
+  margin-bottom: 1rem;
 }
 
 .selectable-outer {
@@ -160,10 +229,14 @@
 }
 
 .selectable-inner {
+  user-select: none;
   padding: 0 0.5rem;
   position: relative;
   height: 28px;
   top: 2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .selectable-inner::before {
   z-index: -1;
@@ -197,6 +270,7 @@
 }
 
 .container {
+  position: relative;
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -204,6 +278,14 @@
 .section {
   background-image: linear-gradient(90deg, rgba(87, 84, 74, 0.4), rgba(87, 84, 74, 0.4) 0.75rem, transparent 0.75rem, transparent 1rem, rgba(87, 84, 74, 0.4) 1rem, rgba(87, 84, 74, 0.4) 1.2rem, transparent 1.2rem);
   padding-left: 3rem;
+  margin-bottom: 1rem;
+  height: fit-content;
+  width: 75vw;
+}
+@media screen and (min-width: 400px) {
+  .section {
+    width: auto;
+  }
 }
 
 .tag {
