@@ -8,7 +8,7 @@ function App() {
         <div className="app">
             <Trim position="header" />
 
-            <div className="container">
+            <div className="main">
                 <div className="txt-title">Amelia Castilla</div>
                 <div className="txt-subtitle tag">
                     Software developer and CS major / Philosophy minor at the University of Central

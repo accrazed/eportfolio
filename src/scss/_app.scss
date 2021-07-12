@@ -12,15 +12,15 @@
     }
     20% {
         background-color: $low;
-        opacity: 100%;
+        opacity: 1;
     }
     50% {
         background-color: $low;
-        opacity: 50%;
+        opacity: 0.5;
     }
     80% {
         background-color: $low;
-        opacity: 100%;
+        opacity: 1;
     }
     100% {
         background-color: $low;
@@ -36,6 +36,8 @@
     width: 100%;
     height: 100%;
     margin: 0;
+    top: 0;
+    left: 0;
     font-family: $font, Arial, Helvetica, sans-serif;
     background: url("https://i.ibb.co/q1FT2Qz/Nie-R-UI-Clean.png") center/cover no-repeat fixed;
     background-size: cover !important;

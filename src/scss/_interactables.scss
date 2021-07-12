@@ -72,9 +72,11 @@ $github-icon-url: "https://raw.githubusercontent.com/gilbarbara/logos/master/log
     height: 32px;
 
     &:hover,
-    &:active {
+    &:active,
+    &-selected {
+        margin-bottom: 4px;
+        height: 32px;
         box-shadow: 0 1px $low, 0 -1px $low;
-
         .selectable-inner {
             color: $high;
 

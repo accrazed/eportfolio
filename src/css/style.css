@@ -2,21 +2,22 @@
 @import url("https://accrazed.github.io/YoRHA-UI-BetterDiscord/font/stylesheet.css");
 @import url("https://accrazed.github.io/YoRHA-UI-BetterDiscord/font/stylesheet.css");
 @import url("https://accrazed.github.io/YoRHA-UI-BetterDiscord/font/stylesheet.css");
+@import url("https://accrazed.github.io/YoRHA-UI-BetterDiscord/font/stylesheet.css");
 @keyframes pulsingBackground {
   0% {
     background-color: #57544a;
   }
   20% {
     background-color: #57544a;
-    opacity: 100%;
+    opacity: 1;
   }
   50% {
     background-color: #57544a;
-    opacity: 50%;
+    opacity: 0.5;
   }
   80% {
     background-color: #57544a;
-    opacity: 100%;
+    opacity: 1;
   }
   100% {
     background-color: #57544a;
@@ -31,6 +32,8 @@
   width: 100%;
   height: 100%;
   margin: 0;
+  top: 0;
+  left: 0;
   font-family: "SCE PS3 Rodin Latin", Arial, Helvetica, sans-serif;
   background: url("https://i.ibb.co/q1FT2Qz/Nie-R-UI-Clean.png") center/cover no-repeat fixed;
   background-size: cover !important;
@@ -67,12 +70,13 @@
   text-align: left;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
-  font-size: 3rem;
-  text-shadow: 0.5rem 0.5rem #979381;
+  font-size: 2.5rem;
+  text-shadow: 0.3rem 0.3rem #979381;
 }
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 435px) {
   .txt-title {
     font-size: 4rem;
+    text-shadow: 0.5rem 0.5rem #979381;
   }
 }
 
@@ -103,15 +107,15 @@
   }
   20% {
     background-color: #57544a;
-    opacity: 100%;
+    opacity: 1;
   }
   50% {
     background-color: #57544a;
-    opacity: 50%;
+    opacity: 0.5;
   }
   80% {
     background-color: #57544a;
-    opacity: 100%;
+    opacity: 1;
   }
   100% {
     background-color: #57544a;
@@ -126,6 +130,8 @@
   width: 100%;
   height: 100%;
   margin: 0;
+  top: 0;
+  left: 0;
   font-family: "SCE PS3 Rodin Latin", Arial, Helvetica, sans-serif;
   background: url("https://i.ibb.co/q1FT2Qz/Nie-R-UI-Clean.png") center/cover no-repeat fixed;
   background-size: cover !important;
@@ -215,16 +221,18 @@
   margin-bottom: 4px;
   height: 32px;
 }
-.selectable-outer:hover, .selectable-outer:active {
+.selectable-outer:hover, .selectable-outer:active, .selectable-outer-selected {
+  margin-bottom: 4px;
+  height: 32px;
   box-shadow: 0 1px #57544a, 0 -1px #57544a;
 }
-.selectable-outer:hover .selectable-inner, .selectable-outer:active .selectable-inner {
+.selectable-outer:hover .selectable-inner, .selectable-outer:active .selectable-inner, .selectable-outer-selected .selectable-inner {
   color: #dad4bb;
 }
-.selectable-outer:hover .selectable-inner::before, .selectable-outer:active .selectable-inner::before {
+.selectable-outer:hover .selectable-inner::before, .selectable-outer:active .selectable-inner::before, .selectable-outer-selected .selectable-inner::before {
   width: 100%;
 }
-.selectable-outer:hover .selectable-inner div, .selectable-outer:active .selectable-inner div {
+.selectable-outer:hover .selectable-inner div, .selectable-outer:active .selectable-inner div, .selectable-outer-selected .selectable-inner div {
   background-color: #dad4bb;
 }
 
@@ -269,10 +277,21 @@
   width: 100%;
 }
 
+.main {
+  position: relative;
+  padding: 0 15%;
+  overflow-y: scroll;
+  height: 85vh;
+}
+
 .container {
   position: relative;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding: 0 15%;
+  overflow-y: hidden;
+  height: 100%;
+}
+.container-trim {
+  padding: 0 5%;
 }
 
 .section {
@@ -280,7 +299,7 @@
   padding-left: 3rem;
   margin-bottom: 1rem;
   height: fit-content;
-  width: 75vw;
+  width: 56vw;
 }
 @media screen and (min-width: 400px) {
   .section {

@@ -3,17 +3,31 @@
 @import "app";
 @import "text";
 @import "interactables";
+@import "vars";
 
 #footer {
     position: fixed;
     bottom: 0;
     width: 100%;
 }
+.main {
+    position: relative;
+    padding: 0 15%;
+
+    overflow-y: scroll;
+    height: 85vh; // TODO: Figure out how to make overflow size perfect - use sticky instead of fixed bottom?
+}
 
 .container {
     position: relative;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 0 15%;
+
+    overflow-y: hidden;
+    height: 100%;
+
+    &-trim {
+        padding: 0 5%;
+    }
 }
 
 .section {
@@ -31,7 +45,7 @@
     margin-bottom: 1rem;
     height: fit-content;
 
-    width: 75vw;
+    width: 56vw;
     @media screen and (min-width: 400px) {
         width: auto;
     }

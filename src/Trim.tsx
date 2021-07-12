@@ -7,7 +7,7 @@ const Trim: FC<TrimProps> = ({ position }) => {
     return (
         <div id={position}>
             <div className="pattern"></div>
-            <div className="container">
+            <div className="container-trim">
                 <div className="pattern-inner"></div>
             </div>
         </div>
