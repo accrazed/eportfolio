@@ -17,6 +17,7 @@ $github-icon-url: "https://raw.githubusercontent.com/gilbarbara/logos/master/log
     background-color: $high;
     width: 20rem;
     height: fit-content;
+    margin: auto;
 }
 
 .card-header {
@@ -27,7 +28,6 @@ $github-icon-url: "https://raw.githubusercontent.com/gilbarbara/logos/master/log
 
     position: relative;
     font-size: 0.9rem;
-    height: 1.5rem;
     padding: 0.25rem 0.75rem;
     margin: auto;
     vertical-align: middle;
@@ -41,7 +41,8 @@ $github-icon-url: "https://raw.githubusercontent.com/gilbarbara/logos/master/log
 }
 
 .gh-icon {
-    mask: url($github-icon-url) center / contain;
+    position: relative;
+    mask: url($github-icon-url) center / contain no-repeat;
     transition: background-color 0.1s;
 
     background-color: $high;

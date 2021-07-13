@@ -1,13 +1,16 @@
 // Credit to .pattern and .pattern-inner goes to https://github.com/metakirby5/yorha
-#footer {
-    position: sticky;
-    bottom: 0;
-    width: 100%;
-}
-
 .pattern {
     margin-top: 1rem;
     border-top: 2px solid $low;
+}
+
+#footer {
+    margin-top: 0;
+    width: 100%;
+
+    .pattern {
+        margin-top: 0;
+    }
 }
 
 .pattern-inner {

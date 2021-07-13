@@ -28,13 +28,15 @@
 }
 
 .app {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   width: 100%;
   height: 100%;
   margin: 0;
   top: 0;
   left: 0;
-  font-family: "SCE PS3 Rodin Latin", Arial, Helvetica, sans-serif;
+  font-family: "sce-ps3_rodin_latinregular", Arial, Helvetica, sans-serif;
   background: url("https://i.ibb.co/q1FT2Qz/Nie-R-UI-Clean.png") center/cover no-repeat fixed;
   background-size: cover !important;
   color: #57544a;
@@ -126,13 +128,15 @@
 }
 
 .app {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   width: 100%;
   height: 100%;
   margin: 0;
   top: 0;
   left: 0;
-  font-family: "SCE PS3 Rodin Latin", Arial, Helvetica, sans-serif;
+  font-family: "sce-ps3_rodin_latinregular", Arial, Helvetica, sans-serif;
   background: url("https://i.ibb.co/q1FT2Qz/Nie-R-UI-Clean.png") center/cover no-repeat fixed;
   background-size: cover !important;
   color: #57544a;
@@ -176,6 +180,7 @@
   background-color: #dad4bb;
   width: 20rem;
   height: fit-content;
+  margin: auto;
 }
 
 .card-header {
@@ -185,7 +190,6 @@
   align-items: center;
   position: relative;
   font-size: 0.9rem;
-  height: 1.5rem;
   padding: 0.25rem 0.75rem;
   margin: auto;
   vertical-align: middle;
@@ -199,7 +203,8 @@
 }
 
 .gh-icon {
-  mask: url("https://raw.githubusercontent.com/gilbarbara/logos/master/logos/github-icon.svg") center/contain;
+  position: relative;
+  mask: url("https://raw.githubusercontent.com/gilbarbara/logos/master/logos/github-icon.svg") center/contain no-repeat;
   transition: background-color 0.1s;
   background-color: #dad4bb;
   height: 1.25rem;
@@ -286,15 +291,17 @@
   height: 11px;
 }
 
-#footer {
-  position: sticky;
-  bottom: 0;
-  width: 100%;
-}
-
 .pattern {
   margin-top: 1rem;
   border-top: 2px solid #57544a;
+}
+
+#footer {
+  margin-top: 0;
+  width: 100%;
+}
+#footer .pattern {
+  margin-top: 0;
 }
 
 .pattern-inner {
@@ -310,6 +317,17 @@
   padding: 0 15%;
   overflow-y: scroll;
   height: 85vh;
+}
+.main::-webkit-scrollbar {
+  background-color: transparent;
+  width: 7px;
+  height: 7px;
+}
+.main::-webkit-scrollbar-track, .main::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+.main::-webkit-scrollbar-thumb {
+  background-color: #57544a;
 }
 
 .container {
@@ -328,6 +346,9 @@
   margin-bottom: 1rem;
   height: fit-content;
   width: 56vw;
+}
+.section p {
+  margin: 0.5rem 0 1rem;
 }
 @media screen and (min-width: 400px) {
   .section {
