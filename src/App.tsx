@@ -2,6 +2,7 @@ import React from 'react';
 import './css/style.css';
 import Trim from './Trim';
 import Projects from './Projects';
+import AboutMe from './AboutMe';
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                     Florida.
                 </div>
                 <Projects />
+                <AboutMe />
             </div>
 
             <Trim position="footer" />

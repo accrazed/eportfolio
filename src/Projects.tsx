@@ -1,5 +1,4 @@
-import { profile } from 'console';
-import React, { FC } from 'react';
+import React from 'react';
 
 type Project = {
     id: string;
@@ -21,8 +20,21 @@ const projects: Project[] = [
         id: 'yorha_ui',
         title: 'YoRHa UI for BetterDiscord',
         description:
-            "SASS-based streamlined environment for a project that completely replaces Discord's default UI. Received over 60 thousand downloads and was featured on PC Gamer Magazine",
+            "SASS-based streamlined environment for a project that completely replaces Discord's default UI. Received over 60 thousand downloads and was featured on PC Gamer Magazine.",
         link: 'https://github.com/AccraZed/YoRHA-UI-BetterDiscord',
+    },
+    {
+        id: 'gosu',
+        title: 'Gosu',
+        description: 'Golang-based wrapper for the osu!APIv2. ', // TODO: ADD MORE INFO
+        link: 'https://github.com/AccraZed/Gosu',
+    },
+    {
+        id: 'tippal',
+        title: 'TipPal',
+        description:
+            'React Native-based phone app that tracks your tips and compiles relevant data for you.',
+        link: 'https://github.com/AccraZed/TipPal',
     },
 ];
 
@@ -45,7 +57,7 @@ const Projects: Function = (): JSX.Element => {
     });
 
     let card = <div />;
-    if (selected != -1) {
+    if (selected !== -1) {
         card = (
             <div className="card">
                 <div className="card-header">

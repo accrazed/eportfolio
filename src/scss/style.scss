@@ -9,8 +9,8 @@
 .main {
     position: relative;
     padding: 0 15%;
-
     overflow-y: scroll;
+    justify-self: center;
     height: 85vh;
 
     &::-webkit-scrollbar {
