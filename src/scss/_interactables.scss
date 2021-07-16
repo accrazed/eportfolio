@@ -16,8 +16,16 @@ $github-icon-url: "https://raw.githubusercontent.com/gilbarbara/logos/master/log
 .card {
     background-color: $high;
     width: 20rem;
-    height: fit-content;
     margin: auto;
+
+    overflow: hidden;
+    transition: transform 0.1s linear;
+    transform: scaleY(0);
+    transform-origin: center;
+
+    &.card-selected {
+        transform: scaleY(1);
+    }
 }
 
 .card-header {
@@ -93,11 +101,12 @@ $github-icon-url: "https://raw.githubusercontent.com/gilbarbara/logos/master/log
         box-shadow: 0 1px $low, 0 -1px $low;
         .selectable-inner {
             color: $high;
+            background-color: transparent;
 
             &::before {
                 width: 100%;
             }
-            div {
+            .bullet {
                 background-color: $high;
             }
         }
@@ -121,22 +130,24 @@ $github-icon-url: "https://raw.githubusercontent.com/gilbarbara/logos/master/log
         right: 0;
         left: 0;
     }
+
+    transition: background-color 0.4s;
+    background-color: $light-mid;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     user-select: none;
     padding: 0 0.5rem;
     position: relative;
     height: 28px;
     top: 2px;
 
-    text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden;
 }
 
 .bullet {
-    margin-right: 0.2rem;
-    display: inline-block;
-    transform: translateY(-0.1rem);
+    margin-right: 0.5rem;
     background-color: $low;
-    width: 11px;
-    height: 11px;
+    width: 0.9rem;
+    height: 0.9rem;
 }

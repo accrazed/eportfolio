@@ -56,10 +56,10 @@ const Projects: Function = (): JSX.Element => {
         );
     });
 
-    let card = <div />;
+    let card = <div className="card" />;
     if (selected !== -1) {
         card = (
-            <div className="card">
+            <div className="card card-selected">
                 <div className="card-header">
                     <span>{projects[selected].title}</span>
                     <div className="gh-icon" onClick={() => window.open(projects[selected].link)} />
@@ -76,9 +76,9 @@ const Projects: Function = (): JSX.Element => {
 
     return (
         <div className="projects">
-            <div className="txt-subtitle section">
-                <p>Projects</p>
-                <div className="list">{list}</div>
+            <div className="section">
+                <p className="txt-subtitle">Projects</p>
+                <div className="list txt-subtext">{list}</div>
             </div>
             {card}
         </div>
