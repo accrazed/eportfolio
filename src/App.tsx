@@ -11,7 +11,7 @@ function App() {
 
             <div className="main">
                 <div className="txt-title">Amelia Castilla</div>
-                <div className="txt-subtitle tag">
+                <div className="txt-subtext tag">
                     Software developer and CS major / Philosophy minor at the University of Central
                     Florida.
                 </div>
