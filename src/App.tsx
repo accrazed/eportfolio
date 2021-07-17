@@ -15,6 +15,7 @@ function App() {
                     Software developer and CS major / Philosophy minor at the University of Central
                     Florida.
                 </div>
+                <p className="txt-subtitle">Projects</p>
                 <Projects />
                 <AboutMe />
             </div>

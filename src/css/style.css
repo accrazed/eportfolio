@@ -34,6 +34,8 @@
   margin: 0;
   top: 0;
   left: 0;
+  display: flex;
+  flex-flow: column;
   font-family: "sce-ps3_rodin_latinregular", Arial, Helvetica, sans-serif;
   background: url("https://i.ibb.co/q1FT2Qz/Nie-R-UI-Clean.png") center/cover no-repeat fixed;
   background-size: cover !important;
@@ -136,6 +138,8 @@
   margin: 0;
   top: 0;
   left: 0;
+  display: flex;
+  flex-flow: column;
   font-family: "sce-ps3_rodin_latinregular", Arial, Helvetica, sans-serif;
   background: url("https://i.ibb.co/q1FT2Qz/Nie-R-UI-Clean.png") center/cover no-repeat fixed;
   background-size: cover !important;
@@ -169,17 +173,19 @@
   pointer-events: none;
 }
 
-.projects {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap;
+.bullet {
+  flex: 0 0 auto;
+  margin-right: 0.5rem;
+  background-color: #57544a;
+  width: 0.9rem;
+  height: 0.9rem;
 }
 
 .card {
   background-color: #dad4bb;
   width: 20rem;
   margin: auto;
+  margin-bottom: 1rem;
   overflow: hidden;
   transition: transform 0.1s linear;
   transform: scaleY(0);
@@ -195,29 +201,12 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  font-size: 0.9rem;
+  font-size: 1rem;
   padding: 0.25rem 0.75rem;
   margin: auto;
   vertical-align: middle;
   background-color: #57544a;
   color: #dad4bb;
-}
-@media screen and (min-width: 435px) {
-  .card-header {
-    font-size: 1rem;
-  }
-}
-
-.gh-icon {
-  position: relative;
-  mask: url("https://raw.githubusercontent.com/gilbarbara/logos/master/logos/github-icon.svg") center/contain no-repeat;
-  transition: background-color 0.1s;
-  background-color: #dad4bb;
-  height: 1.25rem;
-  width: 1.25rem;
-}
-.gh-icon:hover {
-  background-color: #979381;
 }
 
 .card-body {
@@ -243,12 +232,31 @@
   background-color: #979381;
 }
 
+.gh-icon {
+  position: relative;
+  mask: url("https://raw.githubusercontent.com/gilbarbara/logos/master/logos/github-icon.svg") center/contain no-repeat;
+  transition: background-color 0.1s;
+  background-color: #dad4bb;
+  height: 1.25rem;
+  width: 1.25rem;
+}
+.gh-icon:hover {
+  background-color: #979381;
+}
+
+.projects {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .selectable-outer {
-  margin-bottom: 4px;
+  margin: 3px 0;
   height: 32px;
 }
 .selectable-outer:hover, .selectable-outer:active, .selectable-outer-selected {
-  margin-bottom: 4px;
+  margin: 3px 0;
   height: 32px;
   box-shadow: 0 1px #57544a, 0 -1px #57544a;
 }
@@ -267,7 +275,6 @@
   transition: background-color 0.4s;
   background-color: #b6b19b;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   user-select: none;
   padding: 0 0.5rem;
@@ -292,19 +299,17 @@
   left: 0;
 }
 
-.bullet {
-  margin-right: 0.5rem;
-  background-color: #57544a;
-  width: 0.9rem;
-  height: 0.9rem;
-}
-
 .pattern {
   margin-top: 1rem;
   border-top: 2px solid #57544a;
 }
 
+#header {
+  flex: 0 1 auto;
+}
+
 #footer {
+  flex: 0 1 40px;
   margin-top: 0;
   width: 100%;
 }
@@ -325,7 +330,6 @@
   padding: 0 15%;
   overflow-y: scroll;
   justify-self: center;
-  height: 85vh;
 }
 .main::-webkit-scrollbar {
   background-color: transparent;
