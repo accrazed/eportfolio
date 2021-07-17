@@ -71,7 +71,7 @@
   text-align: left;
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.35rem;
   text-shadow: 0.3rem 0.3rem #979381;
   text-transform: uppercase;
 }
@@ -312,7 +312,7 @@
 }
 
 #footer {
-  flex: 0 1 40px;
+  flex: 0 1 auto;
   margin-top: 0;
   width: 100%;
 }
@@ -333,6 +333,7 @@
   padding: 0 15%;
   overflow-y: scroll;
   justify-self: center;
+  height: 100%;
 }
 .main::-webkit-scrollbar {
   background-color: transparent;
