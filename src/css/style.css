@@ -68,12 +68,12 @@
 }
 
 .txt-title {
-  margin-bottom: 1rem;
   text-align: left;
-  text-transform: uppercase;
-  letter-spacing: 0.5rem;
   font-size: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5rem;
   text-shadow: 0.3rem 0.3rem #979381;
+  text-transform: uppercase;
 }
 @media screen and (min-width: 435px) {
   .txt-title {
@@ -83,6 +83,9 @@
 }
 
 .txt-subtitle {
+  letter-spacing: 0.2rem;
+  text-shadow: 0.2rem 0.2rem #979381;
+  text-transform: uppercase;
   font-size: 1.5rem;
   color: rgba(87, 84, 74, 0.8);
 }
@@ -244,7 +247,7 @@
   background-color: #979381;
 }
 
-.projects {
+.list {
   display: flex;
   justify-content: space-between;
   flex-direction: row;

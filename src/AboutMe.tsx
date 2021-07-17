@@ -3,8 +3,8 @@ import React from 'react';
 const AboutMe: Function = (): JSX.Element => {
     return (
         <div className="skills">
+            <p className="txt-subtitle">About Me</p>
             <div className="section">
-                <p className="txt-subtitle">About Me</p>
                 <span className="txt-subtext">
                     Computer Science major and Philosophy minor with an emphasis on algorithms and
                     AI. Experienced with maintaining large-scale CI pipelines across open and close

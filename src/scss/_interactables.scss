@@ -85,13 +85,13 @@ $github-icon-url: "https://raw.githubusercontent.com/gilbarbara/logos/master/log
 }
 
 .list {
-}
-
-.projects {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.projects {
 }
 
 .selectable-outer {

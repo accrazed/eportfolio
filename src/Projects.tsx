@@ -76,8 +76,11 @@ const Projects: Function = (): JSX.Element => {
 
     return (
         <div className="projects">
-            <div className="section txt-subtext">{list}</div>
-            {card}
+            <p className="txt-subtitle">Projects</p>
+            <div className="list">
+                <div className="section txt-subtext">{list}</div>
+                {card}
+            </div>
         </div>
     );
 };
