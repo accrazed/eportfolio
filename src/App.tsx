@@ -3,6 +3,7 @@ import './css/style.css';
 import Trim from './Trim';
 import Projects from './Projects';
 import AboutMe from './AboutMe';
+import Skills from './Skills';
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
 
                 <Projects />
                 <AboutMe />
+                <Skills />
             </div>
 
             <Trim position="footer" />

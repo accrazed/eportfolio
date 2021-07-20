@@ -4,7 +4,7 @@ type Project = {
     id: string;
     title: string;
     description: string;
-    link: string;
+    link: URL;
     image?: string;
 };
 
@@ -14,27 +14,27 @@ const projects: Project[] = [
         title: 'Node Run Script',
         description:
             'Golang-based buildpack for the open-source community Paketo. Allows for automatic building of framework apps like React, Angular, or Vue before turning them into OCI images.',
-        link: 'https://github.com/AccraZed/node-run-script',
+        link: new URL('https://github.com/AccraZed/node-run-script'),
     },
     {
         id: 'yorha_ui',
         title: 'YoRHa UI for BetterDiscord',
         description:
             "SASS-based streamlined environment for a project that completely replaces Discord's default UI. Received over 60 thousand downloads and was featured on PC Gamer Magazine.",
-        link: 'https://github.com/AccraZed/YoRHA-UI-BetterDiscord',
+        link: new URL('https://github.com/AccraZed/YoRHA-UI-BetterDiscord'),
     },
     {
         id: 'gosu',
         title: 'Gosu',
         description: 'Golang-based wrapper for the osu!APIv2. ', // TODO: ADD MORE INFO
-        link: 'https://github.com/AccraZed/Gosu',
+        link: new URL('https://github.com/AccraZed/Gosu'),
     },
     {
         id: 'tippal',
         title: 'TipPal',
         description:
             'React Native-based phone app that tracks your tips and compiles relevant data for you.',
-        link: 'https://github.com/AccraZed/TipPal',
+        link: new URL('https://github.com/AccraZed/TipPal'),
     },
 ];
 
@@ -62,7 +62,10 @@ const Projects: Function = (): JSX.Element => {
             <div className="card card-selected">
                 <div className="card-header">
                     <span>{projects[selected].title}</span>
-                    <div className="gh-icon" onClick={() => window.open(projects[selected].link)} />
+                    <div
+                        className="gh-icon"
+                        onClick={() => window.open(projects[selected].link.toString())}
+                    />
                 </div>
                 <div className="card-body">
                     <div className="card-image"></div>
