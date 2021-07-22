@@ -1,5 +1,11 @@
 import logoGo from './assets/logo_go.svg';
 import logoRust from './assets/logo_rust.svg';
+import logoReact from './assets/logo_react.svg';
+import logoC from './assets/logo_c.svg';
+import logoDocker from './assets/logo_docker.svg';
+import logoSass from './assets/logo_sass.svg';
+import logoJava from './assets/logo_java.svg';
+import logoTypescript from './assets/logo_typescript.svg';
 
 type Skill = {
     name: string;
@@ -12,6 +18,30 @@ const skills: Skill[] = [
         name: 'Golang',
         img: logoGo,
         example: new URL('https://github.com/AccraZed/node-run-script'),
+    },
+    {
+        name: 'Java',
+        img: logoJava,
+    },
+    {
+        name: 'C',
+        img: logoC,
+    },
+    {
+        name: 'Sass',
+        img: logoSass,
+    },
+    {
+        name: 'React',
+        img: logoReact,
+    },
+    {
+        name: 'Typescript',
+        img: logoTypescript,
+    },
+    {
+        name: 'Docker',
+        img: logoDocker,
     },
     {
         name: 'Rust',
@@ -28,7 +58,7 @@ const Skills: Function = (): JSX.Element => {
                 key={skill.name + i}
                 src={skill.img}
                 alt={skill.name + ' logo'}
-                className={'logo-' + skill.name}
+                className={'logo logo-' + skill.name}
             />
         );
         if (skill.example !== undefined) {

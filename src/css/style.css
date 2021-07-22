@@ -328,6 +328,20 @@
   background-repeat: repeat-x;
 }
 
+.logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.logo-grid img {
+  margin: auto 0;
+}
+
+.logo {
+  width: 48px;
+}
+
 .main {
   position: relative;
   padding: 0 15%;
