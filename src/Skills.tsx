@@ -1,10 +1,13 @@
-import logoGo from './assets/logo_go.svg';
-import logoRust from './assets/logo_rust.svg';
-import logoReact from './assets/logo_react.svg';
 import logoC from './assets/logo_c.svg';
 import logoDocker from './assets/logo_docker.svg';
-import logoSass from './assets/logo_sass.svg';
+import logoGCPCompute from './assets/logo_gcp-compute.svg';
+import logoGit from './assets/logo_git.svg';
+import logoGo from './assets/logo_go.svg';
 import logoJava from './assets/logo_java.svg';
+import logoPython from './assets/logo_python.svg';
+import logoReact from './assets/logo_react.svg';
+import logoRust from './assets/logo_rust.svg';
+import logoSass from './assets/logo_sass.svg';
 import logoTypescript from './assets/logo_typescript.svg';
 
 type Skill = {
@@ -22,6 +25,10 @@ const skills: Skill[] = [
     {
         name: 'Java',
         img: logoJava,
+    },
+    {
+        name: 'Python',
+        img: logoPython,
     },
     {
         name: 'C',
@@ -42,6 +49,14 @@ const skills: Skill[] = [
     {
         name: 'Docker',
         img: logoDocker,
+    },
+    {
+        name: 'GCP Compute',
+        img: logoGCPCompute,
+    },
+    {
+        name: 'Git',
+        img: logoGit,
     },
     {
         name: 'Rust',

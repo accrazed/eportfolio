@@ -1,11 +1,11 @@
 @use 'vars' as *;
 
 @import "app";
-@import "text";
-@import "interactables";
-@import "vars";
-@import "trim";
+@import "projects";
 @import "skills";
+@import "text";
+@import "trim";
+@import "vars";
 
 .main {
     position: relative;
@@ -25,6 +25,24 @@
         &-thumb {
             background-color: $low;
         }
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    @include buttonify($low, $high, $alert, $high);
+    padding: 0.75rem 1rem;
+    text-align: center;
+
+    span {
+        text-decoration: none;
+    }
+
+    &.resume-button {
+        width: fit-content;
     }
 }
 

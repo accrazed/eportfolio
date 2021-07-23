@@ -1,7 +1,4 @@
-@use 'app' as *;
 @use 'vars' as *;
-
-$github-icon-url: "https://raw.githubusercontent.com/gilbarbara/logos/master/logos/github-icon.svg";
 
 .bullet {
     flex: 0 0 auto;
@@ -72,12 +69,12 @@ $github-icon-url: "https://raw.githubusercontent.com/gilbarbara/logos/master/log
 
 .gh-icon {
     position: relative;
-    mask: url($github-icon-url) center / contain no-repeat;
+    mask: url("../assets/icon_github.svg") center / contain no-repeat;
     transition: background-color 0.1s;
 
     background-color: $high;
-    height: 1.25rem;
-    width: 1.25rem;
+    height: 1.3rem;
+    width: 1.3rem;
 
     &:hover {
         background-color: $mid;

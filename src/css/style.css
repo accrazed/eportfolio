@@ -23,93 +23,6 @@
     background-color: #57544a;
   }
 }
-.vsc-initialized {
-  margin: 0;
-}
-
-.app {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-flow: column;
-  font-family: "sce-ps3_rodin_latinregular", Arial, Helvetica, sans-serif;
-  background: url("https://i.ibb.co/q1FT2Qz/Nie-R-UI-Clean.png") center/cover no-repeat fixed;
-  background-size: cover !important;
-  color: #57544a;
-  z-index: 1;
-}
-.app::before {
-  top: 0;
-  left: 0;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, rgba(78, 75, 66, 0.2), transparent 30%, transparent 80%, rgba(78, 75, 66, 0.2)), radial-gradient(transparent 50%, rgba(78, 75, 66, 0.4));
-  user-select: none;
-  pointer-events: none;
-}
-.app::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("https://i.ibb.co/Fq9Jt09/Nie-R-Lattice.png") repeat fixed;
-  z-index: 10000;
-  opacity: 0.03;
-  user-select: none;
-  pointer-events: none;
-}
-
-.txt-title {
-  text-align: left;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  letter-spacing: 0.35rem;
-  text-shadow: 0.3rem 0.3rem #979381;
-  text-transform: uppercase;
-}
-@media screen and (min-width: 435px) {
-  .txt-title {
-    font-size: 4rem;
-    text-shadow: 0.5rem 0.5rem #979381;
-  }
-}
-
-.txt-subtitle {
-  letter-spacing: 0.2rem;
-  text-shadow: 0.2rem 0.2rem #979381;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  color: rgba(87, 84, 74, 0.8);
-}
-
-.txt-subtext {
-  font-size: 1rem;
-}
-
-.high {
-  color: #dad4bb;
-}
-
-.mid {
-  color: #979381;
-}
-
-.low {
-  color: #57544a;
-}
-
-.alert {
-  color: #cd664d;
-}
-
 @keyframes pulsingBackground {
   0% {
     background-color: #57544a;
@@ -149,7 +62,6 @@
   color: #57544a;
   z-index: 1;
 }
-
 .app::before {
   top: 0;
   left: 0;
@@ -161,7 +73,6 @@
   user-select: none;
   pointer-events: none;
 }
-
 .app::after {
   content: "";
   position: absolute;
@@ -176,6 +87,26 @@
   pointer-events: none;
 }
 
+@keyframes pulsingBackground {
+  0% {
+    background-color: #57544a;
+  }
+  20% {
+    background-color: #57544a;
+    opacity: 1;
+  }
+  50% {
+    background-color: #57544a;
+    opacity: 0.5;
+  }
+  80% {
+    background-color: #57544a;
+    opacity: 1;
+  }
+  100% {
+    background-color: #57544a;
+  }
+}
 .bullet {
   flex: 0 0 auto;
   margin-right: 0.5rem;
@@ -237,11 +168,11 @@
 
 .gh-icon {
   position: relative;
-  mask: url("https://raw.githubusercontent.com/gilbarbara/logos/master/logos/github-icon.svg") center/contain no-repeat;
+  mask: url("../assets/icon_github.svg") center/contain no-repeat;
   transition: background-color 0.1s;
   background-color: #dad4bb;
-  height: 1.25rem;
-  width: 1.25rem;
+  height: 1.3rem;
+  width: 1.3rem;
 }
 .gh-icon:hover {
   background-color: #979381;
@@ -302,6 +233,83 @@
   left: 0;
 }
 
+.logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.logo-grid img {
+  margin: auto 0;
+}
+
+.logo {
+  width: 48px;
+}
+
+@keyframes pulsingBackground {
+  0% {
+    background-color: #57544a;
+  }
+  20% {
+    background-color: #57544a;
+    opacity: 1;
+  }
+  50% {
+    background-color: #57544a;
+    opacity: 0.5;
+  }
+  80% {
+    background-color: #57544a;
+    opacity: 1;
+  }
+  100% {
+    background-color: #57544a;
+  }
+}
+.txt-title {
+  text-align: left;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.35rem;
+  text-shadow: 0.3rem 0.3rem #979381;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 435px) {
+  .txt-title {
+    font-size: 4rem;
+    text-shadow: 0.5rem 0.5rem #979381;
+  }
+}
+
+.txt-subtitle {
+  letter-spacing: 0.2rem;
+  text-shadow: 0.2rem 0.2rem #979381;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: rgba(87, 84, 74, 0.8);
+}
+
+.txt-subtext {
+  font-size: 1rem;
+}
+
+.high {
+  color: #dad4bb;
+}
+
+.mid {
+  color: #979381;
+}
+
+.low {
+  color: #57544a;
+}
+
+.alert {
+  color: #cd664d;
+}
+
 .pattern {
   margin-top: 1rem;
   border-top: 2px solid #57544a;
@@ -328,20 +336,26 @@
   background-repeat: repeat-x;
 }
 
-.logo-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+@keyframes pulsingBackground {
+  0% {
+    background-color: #57544a;
+  }
+  20% {
+    background-color: #57544a;
+    opacity: 1;
+  }
+  50% {
+    background-color: #57544a;
+    opacity: 0.5;
+  }
+  80% {
+    background-color: #57544a;
+    opacity: 1;
+  }
+  100% {
+    background-color: #57544a;
+  }
 }
-.logo-grid img {
-  margin: auto 0;
-}
-
-.logo {
-  width: 48px;
-}
-
 .main {
   position: relative;
   padding: 0 15%;
@@ -359,6 +373,28 @@
 }
 .main::-webkit-scrollbar-thumb {
   background-color: #57544a;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  transition: background-color 0.2s, color 0.2s;
+  background-color: #57544a;
+  color: #dad4bb;
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
+.button:hover {
+  background-color: #cd664d;
+  color: #dad4bb;
+}
+.button span {
+  text-decoration: none;
+}
+.button.resume-button {
+  width: fit-content;
 }
 
 .container {

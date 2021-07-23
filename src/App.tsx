@@ -12,11 +12,17 @@ function App() {
 
             <div className="main">
                 <div className="txt-title">Amelia Castilla</div>
+
                 <div className="txt-subtext tag">
                     Software developer and CS major / Philosophy minor at the University of Central
                     Florida.
                 </div>
 
+                <a href="./resume.pdf" target="_blank">
+                    <div className="button resume-button">
+                        <span>Resume</span>
+                    </div>
+                </a>
                 <Projects />
                 <AboutMe />
                 <Skills />

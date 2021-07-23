@@ -1,32 +1,5 @@
 @use 'vars' as *;
 
-@mixin boxify($color, $drop-color, $drop) {
-    background: $color;
-    border-radius: 0;
-    box-shadow: $drop $drop 0 $drop-color;
-}
-
-@keyframes pulsingBackground {
-    0% {
-        background-color: $low;
-    }
-    20% {
-        background-color: $low;
-        opacity: 1;
-    }
-    50% {
-        background-color: $low;
-        opacity: 0.5;
-    }
-    80% {
-        background-color: $low;
-        opacity: 1;
-    }
-    100% {
-        background-color: $low;
-    }
-}
-
 .vsc-initialized {
     margin: 0;
 }

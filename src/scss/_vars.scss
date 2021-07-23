@@ -1,5 +1,7 @@
 @import url("https://accrazed.github.io/YoRHA-UI-BetterDiscord/font/stylesheet.css");
 
+$github-icon-url: "https://raw.githubusercontent.com/gilbarbara/logos/master/logos/github-icon.svg";
+
 $font: "sce-ps3_rodin_latinregular";
 
 $mobile-cutoff: 460px;
@@ -9,3 +11,41 @@ $light-mid: #b6b19b;
 $mid: #979381;
 $low: #57544a;
 $alert: #cd664d;
+
+@mixin boxify($color, $drop-color, $drop) {
+    background: $color;
+    border-radius: 0;
+    box-shadow: $drop $drop 0 $drop-color;
+}
+
+@mixin buttonify($base-bg, $base-color, $hover-bg, $hover-color) {
+    transition: background-color 0.2s, color 0.2s;
+    background-color: $base-bg;
+    color: $base-color;
+
+    &:hover {
+        background-color: $hover-bg;
+        color: $hover-color;
+    }
+}
+
+@keyframes pulsingBackground {
+    0% {
+        background-color: $low;
+    }
+    20% {
+        background-color: $low;
+        opacity: 1;
+    }
+    50% {
+        background-color: $low;
+        opacity: 0.5;
+    }
+    80% {
+        background-color: $low;
+        opacity: 1;
+    }
+    100% {
+        background-color: $low;
+    }
+}
