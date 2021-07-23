@@ -18,10 +18,8 @@ function App() {
                     Florida.
                 </div>
 
-                <a href="./resume.pdf" target="_blank">
-                    <div className="button resume-button">
-                        <span>Resume</span>
-                    </div>
+                <a href="./resume.pdf" target="_blank" className="button resume-button">
+                    <span>Resume</span>
                 </a>
                 <Projects />
                 <AboutMe />

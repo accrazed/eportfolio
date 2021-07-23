@@ -239,11 +239,9 @@
   justify-content: center;
   align-items: center;
 }
-.logo-grid img {
-  margin: auto 0;
-}
 
 .logo {
+  margin: 0.25rem;
   width: 48px;
 }
 

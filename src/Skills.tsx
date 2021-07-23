@@ -29,6 +29,7 @@ const skills: Skill[] = [
     {
         name: 'Python',
         img: logoPython,
+        example: new URL('https://github.com/AccraZed/Klove/tree/main/src'),
     },
     {
         name: 'C',
@@ -37,14 +38,17 @@ const skills: Skill[] = [
     {
         name: 'Sass',
         img: logoSass,
+        example: new URL('https://github.com/AccraZed/YoRHA-UI-BetterDiscord'),
     },
     {
         name: 'React',
         img: logoReact,
+        example: new URL('https://github.com/AccraZed/accrazed.github.io'),
     },
     {
         name: 'Typescript',
         img: logoTypescript,
+        example: new URL('https://github.com/AccraZed/accrazed.github.io'),
     },
     {
         name: 'Docker',
