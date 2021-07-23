@@ -3,6 +3,7 @@
 @import url("https://accrazed.github.io/YoRHA-UI-BetterDiscord/font/stylesheet.css");
 @import url("https://accrazed.github.io/YoRHA-UI-BetterDiscord/font/stylesheet.css");
 @import url("https://accrazed.github.io/YoRHA-UI-BetterDiscord/font/stylesheet.css");
+@import url("https://accrazed.github.io/YoRHA-UI-BetterDiscord/font/stylesheet.css");
 @keyframes pulsingBackground {
   0% {
     background-color: #57544a;
@@ -189,19 +190,23 @@
   margin: 3px 0;
   height: 32px;
 }
-.selectable-outer:hover, .selectable-outer:active, .selectable-outer-selected {
+.selectable-outer:hover, .selectable-outer:active,
+.selectable-outer .selected {
   margin: 3px 0;
   height: 32px;
   box-shadow: 0 1px #57544a, 0 -1px #57544a;
 }
-.selectable-outer:hover .selectable-inner, .selectable-outer:active .selectable-inner, .selectable-outer-selected .selectable-inner {
+.selectable-outer:hover .selectable-inner, .selectable-outer:active .selectable-inner,
+.selectable-outer .selected .selectable-inner {
   color: #dad4bb;
   background-color: transparent;
 }
-.selectable-outer:hover .selectable-inner::before, .selectable-outer:active .selectable-inner::before, .selectable-outer-selected .selectable-inner::before {
+.selectable-outer:hover .selectable-inner::before, .selectable-outer:active .selectable-inner::before,
+.selectable-outer .selected .selectable-inner::before {
   width: 100%;
 }
-.selectable-outer:hover .selectable-inner .bullet, .selectable-outer:active .selectable-inner .bullet, .selectable-outer-selected .selectable-inner .bullet {
+.selectable-outer:hover .selectable-inner .bullet, .selectable-outer:active .selectable-inner .bullet,
+.selectable-outer .selected .selectable-inner .bullet {
   background-color: #dad4bb;
 }
 
@@ -354,6 +359,90 @@
     background-color: #57544a;
   }
 }
+@keyframes pulsingBackground {
+  0% {
+    background-color: #57544a;
+  }
+  20% {
+    background-color: #57544a;
+    opacity: 1;
+  }
+  50% {
+    background-color: #57544a;
+    opacity: 0.5;
+  }
+  80% {
+    background-color: #57544a;
+    opacity: 1;
+  }
+  100% {
+    background-color: #57544a;
+  }
+}
+.timeline-container {
+  padding: 3px;
+  border: 3px solid #57544a;
+}
+
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.timeline-list_event {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem;
+  overflow: hidden;
+  max-height: 3rem;
+  transition: transform 0.2s, max-height 0.2s linear;
+}
+.timeline-list_event:hover {
+  z-index: 1;
+  cursor: pointer;
+  transform: scale(1.15);
+}
+.timeline-list_event.selected {
+  transform: scale(1.15);
+  max-height: 20rem !important;
+}
+.timeline-list_event.selected .timeline-list_content {
+  opacity: 1;
+}
+.timeline-list_title {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.timeline-list_br {
+  width: 100%;
+  height: 2px;
+  background-color: #555;
+}
+.timeline-list_stamp {
+  padding-bottom: 0.5rem;
+}
+.timeline-list_content {
+  transition: opacity 0.2s;
+  opacity: 0;
+  text-align: left;
+}
+
+#event_create-node-run-script {
+  max-height: 4rem;
+  color: #dad4bb;
+  background-color: #5616be;
+}
+#event_create-gosu {
+  color: #57544a;
+  background-color: #29beb0;
+}
+#event_start-yorha-ui {
+  color: #dad4bb;
+  background-color: #307679;
+}
+
 .main {
   position: relative;
   padding: 0 15%;

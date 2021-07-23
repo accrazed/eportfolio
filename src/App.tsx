@@ -4,6 +4,7 @@ import Trim from './Trim';
 import Projects from './Projects';
 import AboutMe from './AboutMe';
 import Skills from './Skills';
+import Timeline from './Timeline';
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                 <Projects />
                 <AboutMe />
                 <Skills />
+                <Timeline />
             </div>
 
             <Trim position="footer" />

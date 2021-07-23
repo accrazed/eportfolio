@@ -70,6 +70,7 @@ const skills: Skill[] = [
         ),
     },
 ];
+
 const Skills: Function = (): JSX.Element => {
     let logos = skills.map((skill: Skill, i: number) => {
         let svg = (
@@ -85,7 +86,12 @@ const Skills: Function = (): JSX.Element => {
         }
         return svg;
     });
-    return <div className="logo-grid">{logos}</div>;
+    return (
+        <div className="skills">
+            <p className="txt-subtitle">Tools</p>
+            <div className="logo-grid">{logos}</div>
+        </div>
+    );
 };
 
 export default Skills;

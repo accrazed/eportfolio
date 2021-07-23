@@ -1,0 +1,77 @@
+@use 'vars' as *;
+
+.timeline-container {
+    padding: 3px;
+    border: 3px solid $low;
+}
+
+.timeline-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &_event {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0.5rem;
+
+        overflow: hidden;
+        max-height: 3rem;
+        transition: transform 0.2s, max-height 0.2s linear;
+
+        &:hover {
+            z-index: 1;
+            cursor: pointer;
+            transform: scale(1.15);
+        }
+        &.selected {
+            transform: scale(1.15);
+            max-height: 20rem !important;
+
+            .timeline-list_content {
+                opacity: 1;
+            }
+        }
+    }
+
+    &_title {
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    &_br {
+        width: 100%;
+        height: 2px;
+        background-color: #555;
+    }
+
+    &_stamp {
+        padding-bottom: 0.5rem;
+    }
+
+    &_content {
+        transition: opacity 0.2s;
+        opacity: 0;
+        text-align: left;
+    }
+}
+
+#event {
+    &_create-node-run-script {
+        max-height: 4rem;
+        color: $high;
+        background-color: #5616be;
+    }
+
+    &_create-gosu {
+        color: $low;
+        background-color: #29beb0;
+    }
+
+    &_start-yorha-ui {
+        color: $high;
+        background-color: #307679;
+    }
+}

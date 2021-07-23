@@ -44,7 +44,7 @@ const Projects: Function = (): JSX.Element => {
     let list = projects.map((project: Project, i: number) => {
         return (
             <div
-                className={'selectable-outer' + (i === selected ? '-selected' : '')}
+                className={'selectable-outer' + (i === selected ? ' selected' : '')}
                 onClick={() => (selected === i ? setSelected(-1) : setSelected(i))}
                 key={project.id + i}
             >
