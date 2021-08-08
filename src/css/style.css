@@ -432,15 +432,29 @@
 #event_create-node-run-script {
   max-height: 4rem;
   color: #dad4bb;
-  background-color: #5616be;
+  background-color: #979381;
 }
+
 #event_create-gosu {
-  color: #57544a;
-  background-color: #29beb0;
-}
-#event_start-yorha-ui {
+  max-height: 4rem;
   color: #dad4bb;
-  background-color: #307679;
+  background-color: #736f5f;
+}
+
+#event_start-university {
+  max-height: 4rem;
+  color: #dad4bb;
+  background-color: #4d4a3f;
+}
+
+#event_start-yorha-ui {
+  max-height: 4rem;
+  color: #dad4bb;
+  background-color: #262520;
+}
+
+#event_start-university, #event_create-node-run-script {
+  max-height: 4rem;
 }
 
 .main {

@@ -1,4 +1,5 @@
 @use 'vars' as *;
+@use 'sass:color';
 
 .timeline-container {
     padding: 3px;
@@ -58,20 +59,24 @@
     }
 }
 
+$events: "_create-node-run-script", "_create-gosu", "_start-university", "_start-yorha-ui";
+$increment: lightness($mid) / length($events);
+$i: 0;
+
+@each $event in $events {
+    #event {
+        &#{$event} {
+            max-height: 4rem;
+            color: $high;
+            background-color: color.adjust($color: $mid, $lightness: $i);
+        }
+    }
+    $i: $i - $increment;
+}
+
 #event {
+    &_start-university,
     &_create-node-run-script {
         max-height: 4rem;
-        color: $high;
-        background-color: #5616be;
-    }
-
-    &_create-gosu {
-        color: $low;
-        background-color: #29beb0;
-    }
-
-    &_start-yorha-ui {
-        color: $high;
-        background-color: #307679;
     }
 }

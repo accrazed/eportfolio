@@ -23,6 +23,13 @@ const events: Event[] = [
             'Created a golang-based API wrapper for the osu!api(v2). Included automatic oauth token checking and revalidation and extra useful functions not available on the api by itself.',
     },
     {
+        id: 'start-university',
+        title: 'Began Attendence at UCF',
+        timestamp: 'August 2019',
+        content:
+            'Started studying at the University of Central Florida with a major in computer science and minor in Philosophy.',
+    },
+    {
         id: 'start-yorha-ui',
         title: 'Started YoRHa UI',
         timestamp: 'February 2019',
