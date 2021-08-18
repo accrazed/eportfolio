@@ -124,7 +124,7 @@
   overflow: hidden;
   transition: transform 0.1s linear;
   transform: scaleY(0);
-  transform-origin: center;
+  transform-origin: top;
 }
 .card.card-selected {
   transform: scaleY(1);
@@ -152,10 +152,15 @@
 
 .card-image {
   background-color: #979381;
-  align-self: center;
   width: 100%;
   height: 150px;
   margin-bottom: 1rem;
+  display: flex;
+}
+.card-image img {
+  margin: 0 auto;
+  align-self: center;
+  width: 75%;
 }
 
 .card-divider {

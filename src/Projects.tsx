@@ -5,7 +5,7 @@ type Project = {
     title: string;
     description: string;
     link: URL;
-    image?: string;
+    image?: URL;
 };
 
 const projects: Project[] = [
@@ -56,8 +56,11 @@ const Projects: Function = (): JSX.Element => {
         );
     });
 
-    let card = <div className="card" />;
+    let img = undefined;
+    let card = <div className="card"></div>;
+
     if (selected !== -1) {
+        img = <img src={projects[selected].image?.toString()} alt="" /> || '';
         card = (
             <div className="card card-selected">
                 <div className="card-header">
@@ -68,7 +71,7 @@ const Projects: Function = (): JSX.Element => {
                     />
                 </div>
                 <div className="card-body">
-                    <div className="card-image"></div>
+                    <div className="card-image">{img}</div>
                     <div className="card-description">{projects[selected].description}</div>
                     <div className="card-divider"></div>
                     <div className="card-description"></div>
