@@ -195,23 +195,19 @@
   margin: 3px 0;
   height: 32px;
 }
-.selectable-outer:hover, .selectable-outer:active,
-.selectable-outer .selected {
+.selectable-outer:hover, .selectable-outer:active, .selectable-outer.selected {
   margin: 3px 0;
   height: 32px;
   box-shadow: 0 1px #57544a, 0 -1px #57544a;
 }
-.selectable-outer:hover .selectable-inner, .selectable-outer:active .selectable-inner,
-.selectable-outer .selected .selectable-inner {
+.selectable-outer:hover .selectable-inner, .selectable-outer:active .selectable-inner, .selectable-outer.selected .selectable-inner {
   color: #dad4bb;
   background-color: transparent;
 }
-.selectable-outer:hover .selectable-inner::before, .selectable-outer:active .selectable-inner::before,
-.selectable-outer .selected .selectable-inner::before {
+.selectable-outer:hover .selectable-inner::before, .selectable-outer:active .selectable-inner::before, .selectable-outer.selected .selectable-inner::before {
   width: 100%;
 }
-.selectable-outer:hover .selectable-inner .bullet, .selectable-outer:active .selectable-inner .bullet,
-.selectable-outer .selected .selectable-inner .bullet {
+.selectable-outer:hover .selectable-inner .bullet, .selectable-outer:active .selectable-inner .bullet, .selectable-outer.selected .selectable-inner .bullet {
   background-color: #dad4bb;
 }
 

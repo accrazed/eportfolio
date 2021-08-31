@@ -103,7 +103,7 @@
 
     &:hover,
     &:active,
-    .selected {
+    &.selected {
         margin: 3px 0;
         height: 32px;
         box-shadow: 0 1px $low, 0 -1px $low;
