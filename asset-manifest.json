@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/eportfolio/static/css/main.6130eda8.chunk.css",
+    "main.js": "/eportfolio/static/js/main.ac41841e.chunk.js",
+    "main.js.map": "/eportfolio/static/js/main.ac41841e.chunk.js.map",
+    "runtime-main.js": "/eportfolio/static/js/runtime-main.a4a5ccde.js",
+    "runtime-main.js.map": "/eportfolio/static/js/runtime-main.a4a5ccde.js.map",
+    "static/js/2.7ac1f9d0.chunk.js": "/eportfolio/static/js/2.7ac1f9d0.chunk.js",
+    "static/js/2.7ac1f9d0.chunk.js.map": "/eportfolio/static/js/2.7ac1f9d0.chunk.js.map",
+    "static/js/3.8815e7d5.chunk.js": "/eportfolio/static/js/3.8815e7d5.chunk.js",
+    "static/js/3.8815e7d5.chunk.js.map": "/eportfolio/static/js/3.8815e7d5.chunk.js.map",
+    "index.html": "/eportfolio/index.html",
+    "static/css/main.6130eda8.chunk.css.map": "/eportfolio/static/css/main.6130eda8.chunk.css.map",
+    "static/js/2.7ac1f9d0.chunk.js.LICENSE.txt": "/eportfolio/static/js/2.7ac1f9d0.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/eportfolio/static/media/icon_github.6e9fbdd4.svg",
+    "static/media/logo_c.3a4f1dc2.svg": "/eportfolio/static/media/logo_c.3a4f1dc2.svg",
+    "static/media/logo_docker.ff05cb01.svg": "/eportfolio/static/media/logo_docker.ff05cb01.svg",
+    "static/media/logo_gcp-compute.fb7465bd.svg": "/eportfolio/static/media/logo_gcp-compute.fb7465bd.svg",
+    "static/media/logo_git.94562587.svg": "/eportfolio/static/media/logo_git.94562587.svg",
+    "static/media/logo_go.a7ec2a5c.svg": "/eportfolio/static/media/logo_go.a7ec2a5c.svg",
+    "static/media/logo_java.a6e4d40e.svg": "/eportfolio/static/media/logo_java.a6e4d40e.svg",
+    "static/media/logo_python.ab5b883c.svg": "/eportfolio/static/media/logo_python.ab5b883c.svg",
+    "static/media/logo_react.40a1bcb0.svg": "/eportfolio/static/media/logo_react.40a1bcb0.svg",
+    "static/media/logo_rust.e2e65ae3.svg": "/eportfolio/static/media/logo_rust.e2e65ae3.svg",
+    "static/media/logo_sass.b8981f2f.svg": "/eportfolio/static/media/logo_sass.b8981f2f.svg",
+    "static/media/logo_typescript.b6a67c48.svg": "/eportfolio/static/media/logo_typescript.b6a67c48.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a4a5ccde.js",
+    "static/js/2.7ac1f9d0.chunk.js",
+    "static/css/main.6130eda8.chunk.css",
+    "static/js/main.ac41841e.chunk.js"
+  ]
+}
